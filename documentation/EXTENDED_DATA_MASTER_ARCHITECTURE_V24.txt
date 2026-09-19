@@ -1,0 +1,116 @@
+EXTENDED DATA MASTER ARCHITECTURE V24
+KBK 2023 A++ | The Moral Economy of Carbon Responsibility
+========================================================================
+
+STATUS DECISION
+V23 manuscript remains frozen. V24 is a post-freeze Extended Data and reproducibility stage; it must not change the sample, controls, main carbon outcome, BH-FDR families, overlap-weighting design, or core model architecture.
+
+KEY AUDIT FINDING
+The V15 hardened master already produces the majority of Extended Data promised in V23: provenance, formula/coverage/missingness audits, first- and second-moment balance, categorical/model-specific balance, overlap-weight and ESS diagnostics, RQ1 robustness, governance decomposition, temporal/adoption analyses, t+1/t+2/baseline-adjusted economic analyses, FE/winsor/nonlinear sensitivities, country interactions/slopes, measurement audits, VIF/classical/residual diagnostics, and a country-stratified two-stage firm-cluster bootstrap.
+The explicit remaining analytical gap is configuration-threshold sensitivity. V24 therefore adds a 3x3 threshold grid (governance P40/P50/P60 x sector-year carbon P40/P50/P60), while preserving the V15 pooled-median/sector-year-median map as the manuscript's primary descriptive configuration.
+
+MODULE MAP
+ED-00 | Protocol & manifest
+  Status: Existing V15
+  Source/output: ANALYSIS_PROTOCOL_LOCK_V7.txt; OUTPUT_MANIFEST_V7.txt
+  Rule: Freeze evidence; no change
+
+ED-01 | Raw provenance & sample construction
+  Status: Existing V15
+  Source/output: 00_RAW_QA/REBUILT_SOURCE_COUNTS_V15.csv; 00_RAW_QA/FULL_PANEL_COUNTRY_YEAR_V15.csv; 01_QA/FINAL_SAMPLE_COUNTRY_YEAR_V7.csv
+  Rule: Repository-facing provenance
+
+ED-02 | Formula, coverage & missingness
+  Status: Existing V15
+  Source/output: 01_QA/FORMULA_DENOMINATOR_AUDIT_V7.csv; 01_QA/COVERAGE_EXPANDED_FULL_PANEL_V7.csv; 01_QA/FINAL_MISSINGNESS_EXPANDED_V7.csv
+  Rule: Required by manuscript
+
+ED-03 | Covariate balance
+  Status: Existing V15
+  Source/output: 01_QA/BALANCE_FIRST_SECOND_MOMENTS_V7.csv; 01_QA/BALANCE_CATEGORICAL_V7.csv; 01_QA/MODEL_SPECIFIC_BALANCE_V7.csv
+  Rule: First/second moment + model-specific balance
+
+ED-04 | Overlap-weight diagnostics & ESS
+  Status: Existing V15
+  Source/output: 01_QA/OVERLAP_WEIGHT_DIAGNOSTICS_V7.csv; 01_QA/OVERLAP_WEIGHT_ESS_V7.csv; 01_QA/FIRM_LEVEL_DESIGN_COUNTS_V7.csv
+  Rule: Comparability/positivity evidence
+
+ED-05 | RQ1 robustness
+  Status: Existing V15
+  Source/output: 06_ROBUSTNESS/RQ1_ROBUSTNESS_V7.csv; 06_ROBUSTNESS/FIRM_LEVEL_WEIGHT_SENSITIVITY_V7.csv
+  Rule: Alternative transformations/designs/leave-one-out family
+
+ED-06 | Governance measurement & decomposition
+  Status: Existing V15
+  Source/output: 03_RQ2_GOV_ARCHITECTURE/RQ2A_INDIVIDUAL_BH_FDR_V7.csv; RQ2_ARCHITECTURE_CORE_BH_FDR_V7.csv; RQ2_DOMAIN_DECOMPOSITION_BH_FDR_V7.csv; RQ2_ACCOUNTABILITY_EXTENSIONS_BH_FDR_V7.csv
+  Rule: Formative architecture
+
+ED-07 | Governance temporal/adoption
+  Status: Existing V15
+  Source/output: 03_RQ2_GOV_ARCHITECTURE/RQ2_TEMPORAL_BH_FDR_V7.csv; RQ2_TEMPORAL_BASELINE_ADJ_BH_FDR_V7.csv; RQ2_GOVERNANCE_ADOPTION_V7.csv
+  Rule: Temporal ordering, not causality
+
+ED-08 | Economic consequences
+  Status: Existing V15
+  Source/output: 04_RQ3_ECONOMIC_CONSEQUENCES/RQ3_CORE_T1_BH_FDR_V7.csv; RQ3_STANDARDIZED_EFFECTS_T1_V7.csv; RQ3_T2_BH_FDR_V7.csv; RQ3_BASELINE_ADJUSTED_V7.csv
+  Rule: Eight outcomes + t+2 + baseline adjusted
+
+ED-09 | Economic robustness
+  Status: Existing V15
+  Source/output: 06_ROBUSTNESS/RQ3_WINSORIZED_OUTCOMES_V7.csv; RQ3_FIRM_FE_V7.csv; RQ3_OTHER_SENSITIVITIES_V7.csv; RQ3_NONLINEAR_CARBON_BH_FDR_V7.csv
+  Rule: Robustness family
+
+ED-10 | Institutional heterogeneity
+  Status: Existing V15
+  Source/output: 05_RQ4_INSTITUTIONAL_CONTEXT/RQ4_GOV_ARCHITECTURE_INTERACTIONS_BH_FDR_V7.csv; RQ4_ECONOMIC_INTERACTIONS_BH_FDR_V7.csv; RQ3_COUNTRY_SPECIFIC_V7.csv
+  Rule: Interaction + simple/country slopes
+
+ED-11 | Measurement/validity diagnostics
+  Status: Existing V15
+  Source/output: 08_STATISTICAL_REVIEW/GOVERNANCE_MEASUREMENT_AUDIT_V7.csv; GOVERNANCE_COMPONENT_CORRELATIONS_V7.csv; 01_QA/VALIDITY_DIAGNOSTICS_V7.csv; 01_QA/CARBON_PERSISTENCE_AUDIT_V7.csv
+  Rule: Formative/non-equivalence evidence
+
+ED-12 | Statistical diagnostics
+  Status: Existing V15
+  Source/output: 08_STATISTICAL_REVIEW/VIF_SUBSTANTIVE_V7.csv; CLASSICAL_DIAGNOSTICS_V7.csv; RESIDUAL_DEPENDENCE_V7.csv; CLUSTER_COUNTS_BY_COUNTRY_V7.csv; STATISTICAL_ASSUMPTION_POSITION_V7.txt
+  Rule: Reviewer-facing diagnostics
+
+ED-13 | Moral-economy configuration map
+  Status: Existing V15
+  Source/output: 07_INTERPRETIVE/MORAL_CONFIGURATION_COUNTS_V7.csv; MORAL_CONFIGURATION_ECONOMIC_PROFILES_V7.csv
+  Rule: Descriptive/interpretive only
+
+ED-14 | Configuration-threshold sensitivity
+  Status: NEW V24
+  Source/output: 09_EXTENDED_DATA_V24/ED_CONFIGURATION_THRESHOLD_SENSITIVITY_V24.csv; ED_CONFIGURATION_THRESHOLD_STABILITY_V24.csv
+  Rule: Closes explicit V23 limitation
+
+ED-15 | Bootstrap compact summary
+  Status: V24 conditional
+  Source/output: 08_STATISTICAL_REVIEW/RQ1_TWO_STAGE_CLUSTER_BOOTSTRAP_REPS_V7.dta -> 09_EXTENDED_DATA_V24/ED_BOOTSTRAP_COMPACT_SUMMARY_V24.csv
+  Rule: Only if saved V15 replications verify
+
+ED-16 | Public replication data
+  Status: NEXT
+  Source/output: Representative/synthetic test dataset
+  Rule: Must not redistribute licensed LSEG observations
+
+ED-17 | Code & open-source route
+  Status: NEXT
+  Source/output: V15 Stata code + V24 extension + Python/raw parser documentation + open-source analytical replication route
+  Rule: Repository packaging
+
+ED-18 | Repository metadata
+  Status: NEXT
+  Source/output: README, license, version, persistent DOI/identifier
+  Rule: After package frozen
+
+RUN ORDER
+1. Do not rerun or revise the manuscript core merely to create V24.
+2. Ensure the frozen V15 run has produced 02_FINAL_DATA/FINAL_MORAL_ECONOMY_V7_ANALYSIS_BASE.dta and 03_FINAL_OUTPUTS/FINAL_V7_RAW_STATS/.
+3. Run: do "01_PRODUCTION/03_EXTENDED_DATA_V24.do"
+4. Require hard guardrails: 3,792 firm-years; Indonesia 250; United States 3,542; 1,116 firms.
+5. Review V24_SOURCE_OUTPUT_AUDIT.csv. Any missing source output is a packaging/production issue; do not silently fill it.
+6. Review ED_CONFIGURATION_THRESHOLD_SENSITIVITY_V24.csv and the stability summary. These remain descriptive robustness, not causal evidence.
+7. Claim bootstrap in Extended Data only if ED_BOOTSTRAP_COMPACT_SUMMARY_V24.csv is actually generated from the saved V15 replication file.
+8. Next stage: build the public replication layer (variable dictionary/field map, synthetic/representative test data, open-source replication path, repository README/license/DOI).
