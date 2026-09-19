@@ -1,0 +1,28 @@
+# Licensed/private source data — NEVER COMMIT
+Data Mentah/
+private_data/
+*.dta
+*.sav
+*.sas7bdat
+
+# Production/reconstruction outputs
+00_RAW_STAGING_CSV/
+00_FROZEN_DATA/
+02_FINAL_DATA/
+03_FINAL_OUTPUTS/
+outputs_q1/
+outputs_python_v28/
+
+# Raw vendor exports
+GridExport_*.xlsx
+GridExport_*.XLSX
+
+# Local/environment files
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+*.log.tmp
