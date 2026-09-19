@@ -1,0 +1,11 @@
+metric,value,interpretation
+requested_replications,999,Final Q1 two-stage firm-cluster bootstrap
+estimable_replications,951,Successful complete replications used for inference
+non_estimable_replications,48,Replications in which required parameters could not be estimated
+firm_clusters,1116,firm_id clusters
+analysis_observations,3792,Comparable firm-year sample
+observed_indonesia_coefficient,1.3108199,Same focal coefficient as the primary adjusted country-gap estimate
+bootstrap_standard_error,0.24909985,Two-stage cluster bootstrap
+normal_95_ci,"0.8225932 to 1.799047",Normal-based interval
+percentile_95_ci,"0.8366778 to 1.81999",Bootstrap percentile interval
+bias_corrected_95_ci,"0.8370525 to 1.81999",Bias-corrected bootstrap interval
