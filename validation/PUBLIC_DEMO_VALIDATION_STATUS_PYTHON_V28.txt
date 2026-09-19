@@ -1,0 +1,7 @@
+PUBLIC OPEN-SOURCE DEMONSTRATION V28 = PASS
+Input: deterministic synthetic/representative data only.
+Rows: 500 full panel; 400 predictor-period rows; 100 synthetic firms.
+Carbon formula identity: PASS.
+Overlap weights bounded in (0,1): PASS.
+RQ1-RQ4 and configuration outputs produced.
+This route validates workflow logic only and does not reproduce article coefficients.
