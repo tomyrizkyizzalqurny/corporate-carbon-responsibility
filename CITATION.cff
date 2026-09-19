@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this software or reproducibility package, please cite the archived Zenodo record."
+title: "Corporate Carbon Responsibility in Indonesia and the United States: Reproducibility Source Code"
+type: software
+authors:
+  - family-names: "Izzalqurny"
+    given-names: "Tomy Rizky"
+    orcid: "https://orcid.org/0000-0002-6198-1952"
+  - family-names: "Wahyuningsih"
+    given-names: "Rani Destia"
+    orcid: "https://orcid.org/0000-0003-3600-3097"
+  - family-names: "Safitri"
+    given-names: "Oktaviana"
+  - family-names: "Astriyanti"
+    given-names: "Astriyanti"
+  - family-names: "Aditoro"
+    given-names: "Bagus"
+  - family-names: "Putri"
+    given-names: "Annisa Dwi"
+  - family-names: "Ghozali"
+    given-names: "Muhammad"
+    orcid: "https://orcid.org/0009-0005-3444-099X"
+  - family-names: "Muyassaroh"
+    given-names: "Nuriah"
+doi: "10.5281/zenodo.22764482"
+repository-code: "https://github.com/tomyrizkyizzalqurny/corporate-carbon-responsibility"
+license: MIT
+version: "2026-09-19"
+date-released: 2026-09-19
